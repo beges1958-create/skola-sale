@@ -1,9 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
 
 import { Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
 export default function LekcijeScreen() { 
   const { width } = useWindowDimensions();
+  const router = useRouter();
 
 const buttonVariant: CircleVariant = width >= 600 ? 'small' : 'mini';
 
@@ -31,7 +33,15 @@ contentContainerStyle={[styles.list, { alignItems: "flex-start" }]}
 <CircleButton
   variant={buttonVariant}
   label={naziv}
-  onPress={() => {}}
+onPress={() => {
+  if (index === 0) {
+    return router.push('/uvod' as any);
+  }
+
+  return router.push(`/lekcija${index}` as any);
+}}
+
+
 />
 
 

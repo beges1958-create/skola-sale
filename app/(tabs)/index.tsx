@@ -48,7 +48,12 @@ export default function MenuScreen() {
 
         {/* SREDINA – skroz dole */}
         <View style={styles.middleColumn}>
-          <CircleButton size="mini" label="MUDROSTI" onPress={() => {}} />
+<CircleButton
+  size="mini"
+  label="MUDROSTI"
+  onPress={() => {}}
+/>
+
           <CircleButton size="mini" label="UBACI VIC" onPress={() => {}} />
         </View>
 
