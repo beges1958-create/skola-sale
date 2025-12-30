@@ -20,37 +20,26 @@ const stavke = ['UVOD', ...Array.from({ length: 30 }, (_, i) => `LEKCIJA ${i + 1
 
 
 <ScrollView
-contentContainerStyle={[styles.list, { alignItems: "flex-start" }]}
-
-
+  contentContainerStyle={styles.grid}
   showsVerticalScrollIndicator={false}
 >
+  {stavke.map((naziv, index) => (
+    <View key={index} style={styles.cell}>
+      <CircleButton
+        variant={buttonVariant}
+        label={naziv}
+        onPress={() => {
+          if (index === 0) {
+            return router.push('/uvod' as any);
+          }
 
+          return router.push(`/lekcija${index}` as any);
+        }}
+      />
+    </View>
+  ))}
+</ScrollView>
 
-{stavke.map((naziv, index) => (
-<View key={index} style={styles.row}>
-
-<CircleButton
-  variant={buttonVariant}
-  label={naziv}
-onPress={() => {
-  if (index === 0) {
-    return router.push('/uvod' as any);
-  }
-
-  return router.push(`/lekcija${index}` as any);
-}}
-
-
-/>
-
-
-
-
-  </View>
-))}
-
-      </ScrollView>
     </View>
   );
 }
@@ -141,6 +130,17 @@ list: {
   paddingBottom: 24,
 },
 
+grid: {
+  paddingBottom: 24,
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'flex-start',
+},
+
+cell: {
+  paddingVertical: 6,
+  paddingRight: 12,
+},
 
 
 row: {
