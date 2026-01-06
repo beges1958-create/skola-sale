@@ -752,3 +752,6 @@ Sve ostalo dolazi poslije.
 (ovdje će doći markdown tekst lekcije 30)`,
 };
 
+export default function _IgnoreAsRoute() {
+  return null;
+}

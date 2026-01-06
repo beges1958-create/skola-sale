@@ -8,6 +8,10 @@
     "scheme": "skolasale",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "updates": {
+      "enabled": false
+},
+
     "ios": {
       "supportsTablet": true
     },
@@ -44,6 +48,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8d7540d8-3cae-439d-adb9-f0308ea8e249"
+      }
     }
   }
 }

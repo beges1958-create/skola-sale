@@ -44,3 +44,6 @@ export const markdownStilovi: Record<MarkdownPreset, Record<string, any>> = {
     code_block: { fontFamily: "monospace", fontSize: 15, padding: 14, borderRadius: 10, marginTop: 12, marginBottom: 12 },
   },
 };
+export default function _IgnoreAsRoute() {
+  return null;
+}

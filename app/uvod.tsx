@@ -1,328 +1,387 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function UvodScreen() {
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-      <Text style={styles.text}>
-{`# DOBRODOŠAO U ŠKOLU HUMORA
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Text style={styles.title}>DOBRODOŠAO U ŠKOLU HUMORA</Text>
 
-## Krećeš u jedno od najuzbudljivijih putovanja u svom životu
+        <Text style={styles.subtitle}>Krećeš u jedno od najuzbudljivijih putovanja u svom životu</Text>
 
----
+        <Text style={styles.paragraph}>
+          Ono što ćeš naučiti u sljedećih 30 lekcija nije obična vještina. To je dimenzija života koju većina ljudi nikad ne otkrije.
+        </Text>
 
-Ono što ćeš naučiti u sljedećih 30 lekcija nije obična vještina.
+        <Text style={styles.sectionTitle}>Ova škola je drugačija od svega što si ikad vidio</Text>
 
-To je **dimenzija života** koju većina ljudi nikad ne otkrije.
+        <Text style={styles.paragraph}>Ovdje se NE TRAŽI da si:</Text>
 
----
+        <Text style={styles.bullet}>• Lijep</Text>
+        <Text style={styles.bullet}>• Privlačan</Text>
+        <Text style={styles.bullet}>• Uspješan</Text>
+        <Text style={styles.bullet}>• Obrazovan</Text>
+        <Text style={styles.bullet}>• Bogat</Text>
+        <Text style={styles.bullet}>• Poznat</Text>
 
-## Ova škola je drugačija od svega što si ikad vidio
+        <Text style={styles.paragraph}>Ovdje se traži samo JEDNO:</Text>
+        <Text style={styles.emphasis}>Da budeš duhovit.</Text>
 
-Ovdje se **NE TRAŽI** da si:
-- Lijep
-- Privlačan
-- Uspješan
-- Obrazovan
-- Bogat
-- Poznat
+        <Text style={styles.sectionTitle}>Zašto je to moćnije od svega ostalog?</Text>
 
-Ovdje se traži samo **JEDNO**:
+        <Text style={styles.paragraph}>Jer humor je most prema svim kategorijama ljudi.</Text>
 
-**Da budeš duhovit.**
+        <Text style={styles.paragraph}>
+          Ništa kao osoba koja je duhovita ne briše razliku između nje i vanjskog svijeta.
+        </Text>
 
----
+        <Text style={styles.paragraph}>
+          Kralj sjedne pored prosjaka u kafani – ako je prosjak duhovit, kralj će uživati u njegovom društvu.
+        </Text>
+        <Text style={styles.paragraph}>
+          Milijarder stigne na zabavu – ako ne zna biti smiješan, nitko neće htjeti razgovarati s njim duže od 5 minuta.
+        </Text>
+        <Text style={styles.paragraph}>Lijepa osoba uđe u prostoriju – svi se okrenu.</Text>
+        <Text style={styles.paragraph}>Duhovita osoba progovori – svi žele ostati.</Text>
 
-## Zašto je to moćnije od svega ostalog?
+        <Text style={styles.sectionTitle}>Osoba sa smislom za humor je rado prihvaćena u svim slojevima društva</Text>
 
-Jer humor je **most prema svim kategorijama ljudi**.
+        <Text style={styles.paragraph}>Od najsiromašnijih do najbogatijih.</Text>
+        <Text style={styles.paragraph}>Od najobrazovanijih do onih bez škole.</Text>
+        <Text style={styles.paragraph}>Od najmlađih do najstarijih.</Text>
 
-### Ništa kao osoba koja je duhovita ne briše razliku između nje i vanjskog svijeta.
+        <Text style={styles.emphasis}>Humor ne poznaje granice.</Text>
 
-Kralj sjedne pored prosjaka u kafani - ako je prosjak duhovit, kralj će uživati u njegovom društvu.
+        <Text style={styles.sectionTitle}>Ovo što čitaš nije teorija – to je garantovani sistem</Text>
 
-Milijarder stigne na zabavu - ako ne zna biti smiješan, nitko neće htjeti razgovarati s njim duže od 5 minuta.
+        <Text style={styles.paragraph}>
+          Ako se budeš predano pridržavao zahtjeva ove škole i ako istinski želiš postati osoba od humora, uspjeh je zagarantovan.
+        </Text>
 
-Lijepa osoba uđe u prostoriju - svi se okrenu. Duhovita osoba progovori - svi žele ostati.
+        <Text style={styles.paragraph}>Ovo nije prazno obećanje.</Text>
 
----
+        <Text style={styles.sectionTitle}>Svaka kvalifikacija se postiže vježbom</Text>
 
-## Osoba sa smislom za humor je rado prihvaćena u SVIM slojevima društva
+        <Text style={styles.subheading}>Škole</Text>
+        <Text style={styles.paragraph}>Niko se ne rodi sa znanjem matematike. Učiš. Vježbaš. I znaš.</Text>
 
-Od najsiromašnijih do najbogatijih.
+        <Text style={styles.subheading}>Vrhunski umjetnici</Text>
+        <Text style={styles.paragraph}>Picasso je nacrtao 50.000 slika prije nego što je postao majstor.</Text>
 
-Od najobrazovanijih do onih bez škole.
+        <Text style={styles.subheading}>Vrhunski sportisti</Text>
+        <Text style={styles.paragraph}>Cristiano Ronaldo šutira 1.000 lopti dnevno. Godinama.</Text>
 
-Od najmlađih do najstarijih.
+        <Text style={styles.subheading}>Cirkuski akrobati</Text>
+        <Text style={styles.paragraph}>Padaju 1.000 puta prije nego što trik izvedu savršeno.</Text>
 
-**Humor ne poznaje granice.**
+        <Text style={styles.sectionTitle}>Smisao za humor se postiže na isti način</Text>
 
----
+        <Text style={styles.paragraph}>Vježbom.</Text>
+        {/* === PRIČE O HUMORU === */}
 
-## Ovo što čitaš nije teorija - to je garantovani sistem
+<Text style={styles.sectionTitle}>
+  PRIČE KOJE ĆE PROMIJENITI SVE ŠTO MISLIŠ O HUMORU
+</Text>
 
-Na kraju ove škole humora, ako se budeš **predano predao** zahtjevima i ako **istinski** želiš biti osoba od humora...
+<Text style={styles.paragraph}>Hajde da razbijemo mitove.</Text>
+<Text style={styles.paragraph}>
+  Hajde da vidimo ljude koji su danas legende – i kako su ZAISTA počeli.
+</Text>
 
-...imaš **100% zagarantovan uspjeh**.
+<Text style={styles.sectionTitle}>
+  JERRY SEINFELD – ČOVJEK KOJI JE POBJEGAO SA BINE
+</Text>
 
-**Nije ovo prazno obećanje.**
+<Text style={styles.paragraph}>Danas?</Text>
+<Text style={styles.paragraph}>Miljenik cijelog svijeta.</Text>
+<Text style={styles.paragraph}>Dvorane pune.</Text>
+<Text style={styles.paragraph}>
+  Ljudi plaćaju stotine dolara za kartu.
+</Text>
 
-Evo zašto:
+<Text style={styles.paragraph}>Ali prvi put?</Text>
 
----
+<Text style={styles.paragraph}>Izašao je na binu.</Text>
+<Text style={styles.paragraph}>Otvorio je usta.</Text>
+<Text style={styles.paragraph}>I… ništa.</Text>
 
-## Svaka kvalifikacija se postiže vježbom
+<Text style={styles.paragraph}>Zaboravio je sve.</Text>
+<Text style={styles.paragraph}>Svaku šalu.</Text>
+<Text style={styles.paragraph}>Svaku riječ.</Text>
 
-### Škole:
+<Text style={styles.paragraph}>
+  Publika ga je gledala u tišini koja je bila gora od zvižduka.
+</Text>
+<Text style={styles.paragraph}>
+  Osjećao se kao najveći propalica na planeti.
+</Text>
 
-Niko se ne rodi sa znanjem matematike. Učiš. Vježbaš. I znaš.
+<Text style={styles.paragraph}>Mogao je stati.</Text>
+<Text style={styles.paragraph}>Mogao je reći: “Nisam za ovo.”</Text>
 
-### Vrhunski umjetnici:
+<Text style={styles.paragraph}>Šta je uradio?</Text>
 
-Picasso je nacrtao **50,000 slika** prije nego što je postao majstor.
+<Text style={styles.paragraph}>Vratio se sljedeće večeri.</Text>
+<Text style={styles.paragraph}>I opet.</Text>
+<Text style={styles.paragraph}>I opet.</Text>
+<Text style={styles.paragraph}>I opet.</Text>
 
-### Vrhunski sportisti:
+<Text style={styles.paragraph}>
+  Deset godina. Deset dugih godina padova, ustajanja, učenja i rasta.
+</Text>
 
-Cristiano Ronaldo šutira **1,000 lopti dnevno**. Godinama. I zato je najbolji.
+<Text style={styles.paragraph}>I tek onda – proboj.</Text>
 
-### Cirkuski akrobati:
+<Text style={styles.emphasis}>PORUKA KOJA MIJENJA SVE</Text>
+<Text style={styles.paragraph}>
+  Jerry Seinfeld nije bio rođen smiješan. Bio je rođen UPORAN.
+</Text>
 
-Padaju 1,000 puta prije nego što izvode trik savršeno.
+<Text style={styles.sectionTitle}>
+  CHARLIE CHAPLIN – ČOVJEK KOJI JE OPSJEDNUTO VJEROVAO U VJEŽBU
+</Text>
 
----
+<Text style={styles.paragraph}>
+  Legenda nijemog filma. Ime koje će živjeti vječno.
+</Text>
 
-## Smisao za humor se postiže NA ISTI NAČIN
+<Text style={styles.paragraph}>Da li je bio prirodni talenat?</Text>
+<Text style={styles.paragraph}>Ne.</Text>
 
-**Vježbom.**
+<Text style={styles.paragraph}>Bio je opsjednut vježbom.</Text>
 
-I ovdje nećeš biti prepušten sam sebi.
+<Text style={styles.paragraph}>
+  Ponavljao je isti pokret 100 puta dnevno.
+</Text>
+<Text style={styles.paragraph}>
+  Snimao bi scenu 50 puta. Ne bi bio zadovoljan. Snimao bi još 50 puta.
+</Text>
 
-Slijedićeš **pravila**.
+<Text style={styles.paragraph}>
+  Dok ne bude TAČNO onako kako želi.
+</Text>
 
-Držaćeš se **njih**.
+<Text style={styles.paragraph}>
+  To nije talenat. To je disciplina koja pretvara običnog čovjeka u majstora.
+</Text>
 
-A uz put, imaćeš i **pokazatelj napretka**.
+<Text style={styles.sectionTitle}>
+  KEVIN HART – ČOVJEK KOGA NIKO NIJE HTIO GLEDATI
+</Text>
 
----
+<Text style={styles.paragraph}>Danas?</Text>
+<Text style={styles.paragraph}>Arene pune 20.000 ljudi.</Text>
+<Text style={styles.paragraph}>Smijeh koji ne prestaje.</Text>
 
-## Važno pravilo ove škole:
+<Text style={styles.paragraph}>Ali na početku?</Text>
 
-**Svaka vježba se mora savladati prije nego što pređeš na sljedeću.**
+<Text style={styles.paragraph}>Prazni klubovi.</Text>
+<Text style={styles.paragraph}>Tri ili četiri čovjeka.</Text>
+<Text style={styles.paragraph}>Ponekad – niko.</Text>
 
-Nema preskakanja.
+<Text style={styles.paragraph}>Bacali su mu stvari na binu.</Text>
+<Text style={styles.paragraph}>Zviždali su.</Text>
+<Text style={styles.paragraph}>Ismijavali ga.</Text>
 
-Nema "ajde da probam dalje pa da vidim".
+<Text style={styles.paragraph}>Mogao je odustati.</Text>
+<Text style={styles.paragraph}>Većina bi.</Text>
 
-**Korak po korak.**
+<Text style={styles.paragraph}>Ali nije.</Text>
 
-Kao da gradiš zgradu - ne možeš staviti krov ako nemaš temelje.
+<Text style={styles.paragraph}>
+  I evo ga danas – jedan od najpopularnijih komičara na planeti.
+</Text>
 
----
+<Text style={styles.emphasis}>PORUKA</Text>
+<Text style={styles.paragraph}>
+  Uspjeh nije u tome da svi odmah aplaudiraju.
+</Text>
+<Text style={styles.paragraph}>
+  Uspjeh je u tome da nastaviš kad niko ne aplaudira.
+</Text>
 
-## Šta te čeka na kraju?
+<Text style={styles.sectionTitle}>
+  AKO SU ONI MOGLI – MOŽE SE I OVDJE
+</Text>
 
-Kada prođeš svih **30 lekcija**...
+<Text style={styles.paragraph}>Ovo je najvažnija poruka:</Text>
 
-Kada uložiš **prilično veliki trud** (neće biti lako, ali će vrijediti!)...
+<Text style={styles.paragraph}>Ovi ljudi nisu bili posebni na početku.</Text>
+<Text style={styles.paragraph}>Bili su obični.</Text>
 
-...na kraju **ćeš imati SVOJ SOPSTVENI STIL HUMORA**.
+<Text style={styles.paragraph}>Bojali su se.</Text>
+<Text style={styles.paragraph}>Padali su.</Text>
+<Text style={styles.paragraph}>Griješili su.</Text>
 
-Nećeš više kopirati druge.
+<Text style={styles.paragraph}>Ali su vježbali.</Text>
 
-Nećeš više govoriti tuđe šale.
+<Text style={styles.paragraph}>
+  I to ih je pretvorilo u legende.
+</Text>
 
-**Imaćeš svoj način.**
+<Text style={styles.paragraph}>
+  Razlika između njih i ostalih? Oni su nastavili kad su drugi odustali.
+</Text>
 
-Tvoj glas.
+<Text style={styles.emphasis}>I sada – šta tebe sprječava?</Text>
 
-Tvoju verziju humora.
 
----
+        <Text style={styles.paragraph}>Nećeš biti prepušten sam sebi.</Text>
+        <Text style={styles.paragraph}>Imaćeš pravila.</Text>
+        <Text style={styles.paragraph}>Imaćeš strukturu.</Text>
+        <Text style={styles.paragraph}>Imaćeš pokazatelj napretka.</Text>
 
-## I onda nastavlja priča
+        <Text style={styles.sectionTitle}>Važno pravilo ove škole</Text>
 
-Jer se sa usavršavanjem humora postaje **majstor humora**.
+        <Text style={styles.paragraph}>Svaka vježba se mora savladati prije nego što pređeš na sljedeću.</Text>
 
-A majstori mijenjaju svoje ličnosti.
+        <Text style={styles.paragraph}>Nema preskakanja.</Text>
+        <Text style={styles.paragraph}>Nema improvizacije.</Text>
 
-Ne postaje se samo smiješan - **postaje se drugačija osoba**.
+        <Text style={styles.paragraph}>Korak po korak.</Text>
+        <Text style={styles.paragraph}>Kao gradnja zgrade – bez temelja nema krova.</Text>
 
----
+        <Text style={styles.sectionTitle}>Šta te čeka na kraju</Text>
 
-## Hajde da ti pokažem nešto važno
+        <Text style={styles.paragraph}>Nakon 30 lekcija, velikog truda i discipline, imaćeš:</Text>
 
-### Ljudi koji su napravili imperije su uspješni ljudi u svojim ekonomskim rezultatima.
+        <Text style={styles.paragraph}>Svoj sopstveni stil humora.</Text>
+        <Text style={styles.paragraph}>Svoj glas.</Text>
+        <Text style={styles.paragraph}>Svoj način.</Text>
 
-### Ljudi koji su napravili titule u svojim zanimanjima su uspješni ljudi u svojim profesijama.
+        <Text style={styles.paragraph}>Nećeš kopirati druge.</Text>
+        <Text style={styles.paragraph}>Nećeš pričati tuđe šale.</Text>
 
-### Vrhunski sportisti, pjevači, slikari - ljudi iz svih sfera života su uspješni.
+        <Text style={styles.sectionTitle}>Majstori humora postaju drugačiji ljudi</Text>
 
-Ali...
+        <Text style={styles.paragraph}>Ne postaju samo smiješni.</Text>
+        <Text style={styles.paragraph}>Postaju stabilni.</Text>
+        <Text style={styles.paragraph}>Sigurni.</Text>
+        <Text style={styles.paragraph}>Prisustvo koje ljudi žele.</Text>
 
-Oni koji **JESU** uspješni - bore se da ostanu uspješni.
+        <Text style={styles.sectionTitle}>Ljudi od humora biraju sreću</Text>
 
-Oni koji **NISU** uspješni - bore se da postanu uspješni.
+        <Text style={styles.paragraph}>Uspjeh daje novac.</Text>
+        <Text style={styles.paragraph}>Sreća daje život kakav želiš živjeti.</Text>
 
-Oni koji su **neuspješni** - bore se da se održavaju u svom životu.
+        <Text style={styles.paragraph}>Kombinacija uspjeha i humora stvara potpunu osobu.</Text>
 
-Svi se **dive** ljudima koji su uspjeli. Svi **žele** biti kao oni.
+        <Text style={styles.sectionTitle}>Moć humora</Text>
 
----
+        <Text style={styles.paragraph}>Uđeš u prostoriju – ljudi se nasmiješe.</Text>
+        <Text style={styles.paragraph}>Pričaš – ljudi slušaju.</Text>
+        <Text style={styles.paragraph}>Odeš – ljudi žale što si otišao.</Text>
 
-## Ali ljudi od humora su nešto SASVIM DRUGO
+        <Text style={styles.paragraph}>To nije slučajnost.</Text>
+        <Text style={styles.paragraph}>To je vještina.</Text>
 
-Ljudi od humora su jednostavno ljudi koji imaju **zadovoljstvo i sreću u sebi**.
+        <Text style={styles.sectionTitle}>Kreatori humora</Text>
 
-### Mi ne želimo da nas ljudi dočekuju sa tugom.
+        <Text style={styles.paragraph}>Ljudi koji izmišljaju viceve nisu posebni po rođenju.</Text>
+        <Text style={styles.paragraph}>Posebni su jer su trenirali humor cijeli život.</Text>
 
-### Mi želimo da nas ljudi dočekaju sa **dobrodošlicom** i **vedrim licem**.
+        <Text style={styles.paragraph}>I ti možeš postati jedan od njih.</Text>
 
-A to se dešava zato što **širimo oko sebe dobru i prijatnu atmosferu**.
+        <Text style={styles.sectionTitle}>Zapamti</Text>
 
-Ljudi koji šire prijatnu i dobru atmosferu oko sebe su kao **sunce** - svi žele biti u njihovoj blizini.
+        <Text style={styles.paragraph}>Rezultat opravdava svaki napor.</Text>
+        <Text style={styles.paragraph}>U pitanju je sreća.</Text>
+        <Text style={styles.paragraph}>Najvažnija stvar u životu.</Text>
 
----
+        <Text style={styles.sectionTitle}>Šta sada treba da uradiš</Text>
 
-## Mi smo umjesto uspjeha odabrali SREĆU
+        <Text style={styles.paragraph}>Naoružaj se voljom.</Text>
+        <Text style={styles.paragraph}>Naoružaj se htjenjem.</Text>
+        <Text style={styles.paragraph}>I kreni.</Text>
 
-**To je razlika.**
+        <Text style={styles.sectionTitle}>Ovo nije šala</Text>
 
-Uspjeh ti daje novac, status, priznanje.
+        <Text style={styles.paragraph}>Ovo je ozbiljan program sa neozbiljnim rezultatima.</Text>
+        <Text style={styles.paragraph}>Uči te kako da ne budeš ozbiljan.</Text>
 
-Sreća ti daje **život koji želiš živjeti**.
+        <Text style={styles.sectionTitle}>Posljednja poruka</Text>
 
----
+        <Text style={styles.paragraph}>Ova škola je jedinstvena.</Text>
+        <Text style={styles.paragraph}>Napravljena da te transformiše.</Text>
+        <Text style={styles.paragraph}>Ne da te zabavi.</Text>
+        <Text style={styles.paragraph}>Ne da te informiše.</Text>
+        <Text style={styles.paragraph}>Već da te promijeni.</Text>
 
-## Ali evo moćne kombinacije:
+        <Text style={styles.sectionTitle}>Na pragu si</Text>
 
-Uspješan čovjek + čovjek od humora = **kompletna kombinacija**.
+        <Text style={styles.paragraph}>Ispred tebe je 30 lekcija.</Text>
+        <Text style={styles.paragraph}>30 prilika.</Text>
+        <Text style={styles.paragraph}>30 koraka ka verziji sebe koja zrači.</Text>
 
-Ako već jesi uspješan - dodaj humor i postani POTPUN.
+        <Text style={styles.emphasis}>Jesi li spreman?</Text>
+        <Text style={styles.emphasis}>Krenimo.</Text>
 
-Ako još nisi uspješan - nauči humor i imaš **PREDNOST** nad svima.
+        <Text style={styles.emphasis}>Lekcija 1 te čeka.</Text>
 
----
-
-## Ne samo da ljudi od humora žive sreću - već je i **emituju** oko sebe
-
-Uđeš u prostoriju - ljudi se nasmiješe.
-
-Pričaš - ljudi slušaju.
-
-Odeš - ljudi žale što si otišao.
-
-**To je moć humora.**
-
----
-
-## Da li si se ikad pitao ko su ti ljudi koji izmišljaju viceve?
-
-Evo odgovora:
-
-**To su ljudi koji se cijeli život bave humorom.**
-
-I ti ćeš biti **JEDAN OD TAKVIH LJUDI** ukoliko predano budeš ispunjavao ono što se traži od tebe.
-
----
-
-## Zapamti ovo dobro:
-
-**Rezultat opravdava svaki mogući napor.**
-
-Ovdje je u pitanju **SREĆA**.
-
-A to je **najbitnija stvar u našim životima**.
-
----
-
-## Dakle, oni koji izmišljaju viceve možete biti VI
-
-Onog momenta kada dostignete nivo da stvari posmatrate sa **vedre strane života**...
-
-...i da u svakoj sitnici možete pronaći **komičnu situaciju**...
-
-...a život nudi **bezbroj komičnih scena**...
-
-**...postajete kreator humora.**
-
-Ne konzument. Kreator.
-
----
-
-## Šta treba da uradiš?
-
-**Naoružaj se sa voljom.**
-
-**Naoružaj se sa htjenjem.**
-
-**I kreni.**
-
----
-
-## Ovo nije šala (ironično, zar ne?)
-
-Ovo je **ozbiljan program** koji daje **neozbiljne rezultate**.
-
-Ozbiljan u pristupu.
-
-Neozbiljan u tome što ćeš naučiti kako **NE BITI ozbiljan**.
-
----
-
-## Posljednja stvar prije nego što kreneš:
-
-**Ova škola je jedinstvena u svijetu.**
-
-Nećeš naći ništa slično.
-
-Zato što je napravljena sa **ciljem** - da te pretvori u osobu od humora.
-
-Ne da te zabavi.
-
-Ne da te informiše.
-
-Već da te **TRANSFORMIŠE**.
-
----
-
-## Sad si na pragu
-
-Ispred tebe je 30 lekcija.
-
-30 prilika da naučiš nešto novo.
-
-30 koraka ka verziji sebe koja **ZRAČI**.
-
----
-
-**Jesi li spreman?**
-
-**Krenimo.**
-
-Lekcija 1 te čeka.
-
----
-
-**Dobrodošao u Školu Humora.**
-
-**Tvoj život se mijenja od danas.**`}
-      </Text>
-    </ScrollView>
+        <Text style={styles.paragraph}>Dobrodošao u Školu Humora.</Text>
+        <Text style={styles.paragraph}>Tvoj život se mijenja od danas.</Text>
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6b3a1e',
+    backgroundColor: '#000',
   },
   content: {
     padding: 16,
     paddingBottom: 40,
   },
-  text: {
+  title: {
     color: '#fff',
-    fontSize: 15,
+    fontSize: 30,
+    fontWeight: '900',
+    lineHeight: 30,
+    marginBottom: 10,
+  },
+  subtitle: {
+    color: '#fff',
+    fontSize: 20,
+    fontStyle: 'italic',
     lineHeight: 22,
+    marginBottom: 14,
+  },
+  sectionTitle: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: '800',
+    lineHeight: 24,
+    marginTop: 18,
+    marginBottom: 10,
+  },
+  subheading: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '800',
+    lineHeight: 20,
+    marginTop: 10,
+    marginBottom: 6,
+  },
+  paragraph: {
+    color: '#fff',
+    fontSize: 17,
+    lineHeight: 22,
+    marginBottom: 10,
+  },
+  bullet: {
+    color: '#fff',
+    fontSize: 18,
+    lineHeight: 22,
+    marginBottom: 6,
+    marginLeft: 10,
+  },
+  emphasis: {
+    color: '#fff',
+    fontSize: 22,
+    fontWeight: '900',
+    lineHeight: 22,
+    marginBottom: 10,
   },
 });
