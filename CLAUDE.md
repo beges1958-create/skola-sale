@@ -35,6 +35,17 @@ Ovaj fajl je “ugovor” i memorija projekta: sve što AI pogriješi jednom, ov
 
 ---
 ## 2) Zlatna pravila (NE KRŠI)
+0) VRHOVNI PRIORITET: MIKRO-KORACI “KLIK-PO-KLIK” + STOP NA SVAKOM KORAKU
+- Kad korisnik kaže “objasni od nule”, AI MORA davati uputstva kao za osobu koja ne zna gdje su meniji/ikonice.
+- Svaka poruka AI smije sadržati TAČNO 1 mikro-korak = 1 radnja (jedan klik ili jedna tipka).
+- Nakon svakog mikro-koraka AI MORA stati i tražiti dokaz: “ok” ili screenshot.
+- Mikro-koraci moraju biti ultra-konkretni i prostorno opisani (gdje na ekranu je ikona/meni).
+- Zabranjeno je spajanje više radnji u jedan korak (npr. “otvori X i klikni Y” je zabranjeno).
+- Ako korisnik ne vidi opciju ili je UI drugačiji: AI NE POGAĐA, nego traži screenshot.
+Primjer forme:
+1) Klikni na ikonu sa tri crte (☰) u gornjem lijevom uglu (pored plave VS Code ikone). (čekam ok/screenshot)
+2) U meniju klikni “Open Folder…”. (čekam ok/screenshot)
+3) U prozoru izaberi folder “sufler”. (čekam ok/screenshot)
 
 1) **Ne izmišljaj fajlove/putanje.** Ako nisi siguran — traži strukturu foldera ili naziv fajla.
 2) **Ako korisnik kaže “samo sa slike”**: govori isključivo ono što se vidi na slici, bez pretpostavki.
@@ -190,6 +201,9 @@ Svaka važna odluka se upisuje ovdje:
 - [2026-01-13] Odluka: Usvojen fajl CLAUDE.md kao obavezna pravila rada za sve AI u projektu ŠKOLA-ŠALE.  
   Razlog: Potrebno je spriječiti nagađanje, miješanje RN i Next.js konteksta i isporuke s više koraka odjednom.  
   Posljedica: Sav AI rad ide kroz tikete, jedan korak po poruci, uz obavezan dokaz gotovosti.
+- [2026-01-13] Odluka: Uveden vrhovni režim mikro-koraka “klik-po-klik” za sva “objasni od nule” uputstva.  
+  Razlog: Korisnik zahtijeva maksimalnu jasnoću bez ikakvih pretpostavki o UI, menijima ili ikonama.  
+  Posljedica: AI daje tačno 1 mikro-korak (jedan klik ili jedna tipka) po poruci i obavezno čeka “ok” ili screenshot.
 
 
 ---
