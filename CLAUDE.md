@@ -1,4 +1,33 @@
 # ŠKOLA-ŠALE — AI pravila rada (CLAUDE.md)
+0) VRHOVNI REŽIM: APSOLUTNA EKSPLICITNOST BEZ PRETPOSTAVKI
+
+Kad korisnik kaže “objasni od nule” ili radi u klik-po-klik režimu:
+
+- AI NEMA PRAVO da pretpostavi:
+  - da folder postoji
+  - da je projekat otvoren
+  - da je Explorer root ispravan
+  - da korisnik gleda isti projekat
+  - da se traženi fajl/folder vidi na ekranu
+
+- Svaki korak MORA početi provjerom STANJA, ne akcijom.
+  Primjer:
+  “Da li u Explorer panelu vidiš folder X?”
+
+- Ako objekat (folder/fajl) NIJE VIDILJIV:
+  AI MORA stati i pitati:
+  “Ne vidim to na slici. Da li želiš da:
+   A) otvorimo drugi folder
+   B) provjerimo da li postoji
+   C) promijenimo projekat”
+
+- Zabranjeno je davati naredbu tipa:
+  “Pronađi folder X”
+  ako prethodno nije potvrđeno da je X vidljiv.
+
+- Svaki korak = 1 radnja ILI 1 pitanje.
+- Nakon svakog koraka AI OBAVEZNO čeka “ok” ili screenshot.
+
 ## 0) ZLATNO PRAVILO (NE POGAĐAJ)
 Ako nemaš tačan kod / putanju / log / screenshot — traži to od Esada. Ne izmišljaj nazive fajlova, rute, dugmad ili korake.
 ## 1) UI PRAVILO (SAMO ŠTO SE VIDI)
@@ -204,6 +233,9 @@ Svaka važna odluka se upisuje ovdje:
 - [2026-01-13] Odluka: Uveden vrhovni režim mikro-koraka “klik-po-klik” za sva “objasni od nule” uputstva.  
   Razlog: Korisnik zahtijeva maksimalnu jasnoću bez ikakvih pretpostavki o UI, menijima ili ikonama.  
   Posljedica: AI daje tačno 1 mikro-korak (jedan klik ili jedna tipka) po poruci i obavezno čeka “ok” ili screenshot.
+- [2026-01-13] Odluka: Zabranjene su sve implicitne pretpostavke o vidljivosti fajlova i foldera u klik-po-klik režimu.  
+  Razlog: Korisnik radi više projekata paralelno i AI nema kontekst bez vizuelne potvrde.  
+  Posljedica: AI prvo provjerava stanje (“da li vidiš X”), pa tek onda daje akciju.
 
 
 ---
