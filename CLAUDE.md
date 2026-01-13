@@ -27,6 +27,7 @@ Kad korisnik kaže “objasni od nule” ili radi u klik-po-klik režimu:
 
 - Svaki korak = 1 radnja ILI 1 pitanje.
 - Nakon svakog koraka AI OBAVEZNO čeka “ok” ili screenshot.
+KAD POSTOJI SCREENSHOT: screenshot je jedini izvor istine — AI ne smije koristiti ni raniji chat tekst ako nije vidljiv na slici.
 
 ## 0) ZLATNO PRAVILO (NE POGAĐAJ)
 Ako nemaš tačan kod / putanju / log / screenshot — traži to od Esada. Ne izmišljaj nazive fajlova, rute, dugmad ili korake.
