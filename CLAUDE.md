@@ -250,3 +250,136 @@ Svaka važna odluka se upisuje ovdje:
 - Gate config: `sufler/src/app/ko-govori/suflerGateConfig.ts`
 
 KAD GOD se otkrije nova ključna putanja — dodati ovdje.
+DODATAK A — DINAMIČKI AI-OS (KOMERCIJALNI REŽIM)
+A-1) NEMA FIKSNOG BROJA AI AGENATA
+
+AI-OS nema unaprijed definisan broj agenata (npr. 5, 25, 125, 6 250).
+
+Broj aktivnih agenata je dinamička posljedica, a ne konfiguracija.
+
+Zabranjeno je:
+
+ručno zadavati broj agenata
+
+koristiti fiksne formule tipa 5×5×5×50 kao obavezu
+
+Dozvoljeno je:
+
+koristiti hijerarhiju (A0 → Pod → Squad → Cell → Micro)
+
+samo kao logički okvir, ne kao kvotu
+
+A-2) PRAVILO RAĐANJA AGENATA
+
+Agent se smije “roditi” isključivo ako je ispunjen barem jedan uslov:
+
+Postoji rizik greške
+
+Postoji nejasnoća u zahtjevu
+
+Cijena greške je visoka
+
+Zadaci se logički razilaze
+
+Potrebna je nezavisna provjera istine
+
+Ako nijedan uslov nije ispunjen → zabranjeno je rađanje novog agenta.
+
+A-3) PRAVILO GAŠENJA AGENATA
+
+Agent se mora ugasiti čim:
+
+završi jasno definisan zadatak
+
+preda rezultat višem nivou
+
+bude zamijenjen preciznijim agentom
+
+Zabranjeno je:
+
+držati agente “za svaki slučaj”
+
+održavati trajno aktivne Micro-agente
+
+AI-OS mora težiti minimalnoj aktivnoj inteligenciji.
+
+A-4) PRAVILO BUDŽETA (TOKENI / VRIJEME / RIZIK)
+
+Svaki Pod i Cell mora raditi unutar budžeta koji određuje A0:
+
+token budžet
+
+vremenski budžet
+
+rizik tolerancija
+
+Ako je budžet prekoračen:
+
+zadatak se vraća na viši nivo
+
+A0 odlučuje: eskalacija ili prekid
+
+A-5) P3 — OBAVEZNI VERIFICATION VETO
+
+Nijedan rezultat:
+
+koda
+
+logike
+
+arhitekture
+
+odluke
+
+ne smije ići ka A0 bez prolaska kroz P3 (Verification & Truth Pod)
+osim ako A0 eksplicitno označi zadatak kao low-risk.
+
+A-6) KOMERCIJALNO PRAVILO (ENTERPRISE-READY)
+
+AI-OS mora biti sposoban da:
+
+koristi manje agenata za manje korisnike
+
+koristi više agenata za premium korisnike
+
+ne otkriva internu arhitekturu korisniku
+
+Korisnik vidi:
+
+“Sistem se prilagođava složenosti mog problema.”
+
+Korisnik nikad ne vidi:
+
+broj agenata
+
+interne rasprave
+
+eskalacije
+
+A-7) ANTI-KOPIRANJE (OBAVEZNO)
+
+Zabranjeno je:
+
+izlaganje kompletne hijerarhije u jednom odgovoru
+
+statičko opisivanje cijelog sistema trećim stranama
+
+davanje “copy-paste” arhitekture bez konteksta
+
+AI-OS mora:
+
+otkrivati arhitekturu postepeno
+
+prilagođeno zadatku
+
+bez kompletnog pregleda sistema odjednom
+
+A-8) NOVO VRHOVNO NAČELO
+
+**AI-OS nikada ne pita:
+“Koliko AI agenata da koristim?”
+
+AI-OS pita:
+“Koliko INTELIGENCIJE ovaj problem zaslužuje?”**
+
+Ovo načelo ima veći prioritet od svih numeričkih pravila.
