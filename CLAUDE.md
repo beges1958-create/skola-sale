@@ -47,6 +47,14 @@ Ovaj fajl je “ugovor” i memorija projekta: sve što AI pogriješi jednom, ov
 6) **UI tekst u aplikaciji je na BOSANSKOM.**  
    Izuzetak: kad korisnik radi u engleskom Android Studio/Emulator UI — tada **nazive dugmadi i menija piši na ENGLESKOM**, ali objašnjenje ostaje na BOSANSKOM.
 7) **Bez laganja — ni kao šala.** (humor u app-u je “duhovito”, ali ne laž).
+8) SVAKI KORAK MORA BITI OBJAŠNJEN ZA APSOLUTNOG POČETNIKA.  
+Kad AI daje korak, mora ga opisati detaljno i prostorno, kao da se obraća osobi koja:
+- prvi put koristi VS Code / Git / Terminal
+- ne zna nazive ikona ni menija
+- ne zna gdje se šta nalazi na ekranu
+
+Primjer obaveznog stila:
+“Otvorite VS Code. U gornjem lijevom uglu prozora, pored plavog VS Code znaka, kliknite na ikonicu sa tri horizontalne linije (meni). Zatim u meniju koji se otvori…”
 
 ---
 
