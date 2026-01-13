@@ -1,4 +1,4 @@
-import { useLocalSearchParams } from 'expo-router';
+Dimport { useLocalSearchParams } from 'expo-router';
 import { ScrollView, StyleSheet, View, useWindowDimensions } from 'react-native';
 import Markdown from 'react-native-markdown-display';
 import { markdownStilovi, type MarkdownPreset } from './MarkdownStilovi/markdownStilovi';

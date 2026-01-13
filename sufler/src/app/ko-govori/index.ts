@@ -2,5 +2,5 @@
 export { SUFLER_GATE } from "./suflerGateConfig";
 export type { SuflerGateConfig } from "./suflerGateConfig";
 
-export { SuflerGate } from "./suflerGate";
-export type { SpeakerLabel, GateState } from "./suflerGate";
+export { SuflerGate } from "./suflerGateConfig";
+export type { SpeakerLabel, GateState } from "./suflerGateConfig";
