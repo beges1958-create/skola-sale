@@ -320,7 +320,11 @@ export default function Home() {
 
   return (
     <main style={{ maxWidth: 700, margin: "40px auto", padding: 16 }}>
-      <h1 style={{ fontSize: 28, marginBottom: 12 }}>ai sufler</h1>
+      <h1 style={{ fontSize: 28, marginBottom: 12 }}>Sufler</h1>
+      <div style={{ fontSize: 20, fontWeight: 800, opacity: 0.9, marginBottom: 16 }}>
+        ŠAPTAČ PAMETNIH ODGOVORA
+      </div>
+
 
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
         <div
