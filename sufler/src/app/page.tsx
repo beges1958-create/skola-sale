@@ -319,7 +319,7 @@ export default function Home() {
   }
 
   return (
-    <main style={{ maxWidth: 700, margin: "40px auto", padding: 16 }}>
+    <main style={{ maxWidth: 700, margin: "40px auto", padding: 16, paddingBottom: 120 }}>
       <h1 style={{ fontSize: 28, marginBottom: 12 }}>Sufler</h1>
       <div style={{ fontSize: 20, fontWeight: 800, opacity: 0.9, marginBottom: 16 }}>
         ŠAPTAČ PAMETNIH ODGOVORA
@@ -400,212 +400,171 @@ export default function Home() {
 
           <button
             type="button"
+
+
             onClick={() => {
-              try {
-                localStorage.removeItem(OWNER_CALIBRATION_KEY);
-              } catch {
-                // ignore
-              }
-              setOwnerCal(null);
-              if (listening) stopListening();
-            }}
-            style={{ padding: "8px 12px", fontSize: 14 }}
-          >
-            Ponovo podesi glas vlasnika
-          </button>
-        </div>
-      </div>
-      <label style={{ display: "block", marginTop: 8, marginBottom: 6 }}>kontekst (opciono)</label>
-      <textarea
-        value={contextText}
-        onChange={(e) => setContextText(e.target.value)}
-        placeholder="1–2 prethodne rečenice ili situacija..."
-        rows={3}
-        style={{ width: "100%", padding: 12, fontSize: 16 }}
-      />
-
-      <label style={{ display: "block", marginTop: 14, marginBottom: 6 }}>šta je sagovornik upravo rekao</label>
-      <textarea
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="upiši zadnju rečenicu... (ili klikni slušaj)"
-        rows={4}
-        style={{ width: "100%", padding: 12, fontSize: 16 }}
-      />
-
-      <div style={{ marginTop: 12, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-        {!ownerCal && (
-          <button
-            type="button"
-            onClick={() => {
-              if (isCalibratingOwner) return;
-
-              if (listening) {
-                beginOwnerCalibration();
-                return;
-              }
-
-              beginOwnerCalibration();
               startListening();
             }}
             style={{ padding: "8px 12px", fontSize: 14 }}
           >
             Podesi glas vlasnika
           </button>
-        )}
 
-        <button
-          type="button"
-          disabled={isCalibratingOwner || loading}
-          onClick={() => {
-            if (listening) {
-              stopListening();
-              return;
-            }
-            startListening();
-          }}
-          style={{ padding: "8px 12px", fontSize: 14 }}
-        >
-          {listening ? "zaustavi" : "slušaj"}
-        </button>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: 14, opacity: 0.85 }}>
-            Test: ko govori? <strong>{testKoGovori === "VLASNIK" ? "Vlasnik" : "Sagovornik"}</strong>
-          </span>
 
           <button
             type="button"
-            disabled={isCalibratingOwner}
-            onClick={() => setTestKoGovori("SAGOVORNIK")}
-            style={{
-              padding: "8px 12px",
-              fontSize: 14,
-              border: "1px solid #ddd",
-              borderRadius: 10,
-              background: testKoGovori === "SAGOVORNIK" ? "#eee" : "transparent",
-            }}
-          >
-            Sagovornik
-          </button>
-
-          <button
-            type="button"
-            disabled={isCalibratingOwner}
-            onClick={() => setTestKoGovori("VLASNIK")}
-            style={{
-              padding: "8px 12px",
-              fontSize: 14,
-              border: "1px solid #ddd",
-              borderRadius: 10,
-              background: testKoGovori === "VLASNIK" ? "#eee" : "transparent",
-            }}
-          >
-            Vlasnik
-          </button>
-        </div>
-      </div>
-
-      {reply ? (
-        <>
-          <p style={{ marginTop: 18, fontSize: 18, lineHeight: 1.4 }}>{reply}</p>
-
-          <button
-            type="button"
-            onClick={onCopy}
-            style={{ marginTop: 10, padding: "8px 12px", fontSize: 14 }}
-          >
-            {copied ? "Kopirano" : "Kopiraj repliku"}
-          </button>
-        </>
-      ) : null}
-
-      <div style={{ marginTop: 22 }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-          <h2 style={{ fontSize: 18, marginBottom: 8 }}>istorija</h2>
-
-          <button
-            type="button"
+            disabled={isCalibratingOwner || loading}
             onClick={() => {
-              setHistory([]);
-              try {
-                localStorage.removeItem("sufler.history.v1");
-              } catch {
-                // ignore
+              if (listening) {
+                stopListening();
+                return;
               }
+              startListening();
             }}
             style={{ padding: "8px 12px", fontSize: 14 }}
           >
-            Obriši istoriju
+            {listening ? "zaustavi" : "slušaj"}
           </button>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontSize: 14, color: "#fff" }}>
+              Test: ko govori? <strong>{testKoGovori === "VLASNIK" ? "Vlasnik" : "Sagovornik"}</strong>
+            </span>
+
+            <button
+              type="button"
+              disabled={isCalibratingOwner}
+              onClick={() => setTestKoGovori("SAGOVORNIK")}
+              style={{
+                padding: "8px 12px",
+                fontSize: 14,
+                border: "1px solid #ddd",
+                borderRadius: 10,
+                background: testKoGovori === "SAGOVORNIK" ? "#eee" : "transparent",
+              }}
+            >
+              Sagovornik
+            </button>
+
+            <button
+              type="button"
+              disabled={isCalibratingOwner}
+              onClick={() => setTestKoGovori("VLASNIK")}
+              style={{
+                padding: "8px 12px",
+                fontSize: 14,
+                border: "1px solid #ddd",
+                borderRadius: 10,
+                background: testKoGovori === "VLASNIK" ? "#eee" : "transparent",
+              }}
+            >
+              Vlasnik
+            </button>
+          </div>
         </div>
 
-        {history.length === 0 ? (
-          <p style={{ opacity: 0.7 }}>još nema upisa.</p>
-        ) : (
-          <div style={{ display: "grid", gap: 10 }}>
-            {history
-              .slice(-10)
-              .reverse()
-              .map((item, i) => (
-                <div
-                  key={item.at + "-" + i}
-                  style={{ padding: 12, border: "1px solid #ddd", borderRadius: 10 }}
-                >
-                  <div style={{ fontSize: 14, opacity: 0.7, marginBottom: 6 }}>
-                    {new Date(item.at).toISOString()}
+        {reply ? (
+          <>
+            <p style={{ marginTop: 18, fontSize: 18, lineHeight: 1.4 }}>{reply}</p>
+
+            <button
+              type="button"
+              onClick={onCopy}
+              style={{ marginTop: 10, padding: "8px 12px", fontSize: 14 }}
+            >
+              {copied ? "Kopirano" : "Kopiraj repliku"}
+            </button>
+          </>
+        ) : null}
+
+        <div style={{ marginTop: 22, marginBottom: 120 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+            <h2 style={{ fontSize: 18, marginBottom: 8 }}>istorija</h2>
+
+            <button
+              type="button"
+              onClick={() => {
+                setHistory([]);
+                try {
+                  localStorage.removeItem("sufler.history.v1");
+                } catch {
+                  // ignore
+                }
+              }}
+              style={{ padding: "8px 12px", fontSize: 14 }}
+            >
+              Obriši istoriju
+            </button>
+          </div>
+
+          {history.length === 0 ? (
+            <p style={{ opacity: 0.7 }}>još nema upisa.</p>
+          ) : (
+            <div style={{ display: "grid", gap: 10 }}>
+              {history
+                .slice(-10)
+                .reverse()
+                .map((item, i) => (
+                  <div
+                    key={item.at + "-" + i}
+                    style={{ padding: 12, border: "1px solid #ddd", borderRadius: 10 }}
+                  >
+                    <div style={{ fontSize: 14, opacity: 0.7, marginBottom: 6 }}>
+                      {new Date(item.at).toISOString()}
+                    </div>
+                    <div style={{ marginBottom: 6 }}>
+                      <strong>sagovornik:</strong> {item.said}
+                    </div>
+                    <div>
+                      <strong>sufler:</strong> {item.replied}
+                    </div>
                   </div>
-                  <div style={{ marginBottom: 6 }}>
-                    <strong>sagovornik:</strong> {item.said}
-                  </div>
-                  <div>
-                    <strong>sufler:</strong> {item.replied}
-                  </div>
-                </div>
-              ))}
+                ))}
+            </div>
+          )}
+        </div>
+
+        {isCalibratingOwner && (
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.55)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 16,
+              zIndex: 50,
+            }}
+          >
+            <div
+              style={{
+                maxWidth: 520,
+                width: "100%",
+                background: "white",
+                borderRadius: 14,
+                padding: 16,
+              }}
+            >
+              <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>Podešavanje glasa vlasnika</div>
+
+              <div style={{ marginBottom: 10, lineHeight: 1.4 }}>
+                Pričaj normalno oko <b>10–15 sekundi</b> (npr. 3 rečenice). Cilj je da aplikacija kasnije ignoriše tebe i daje
+                replike samo drugima.
+              </div>
+
+              <div style={{ marginBottom: 12 }}>
+                Preostalo: <b>{Math.ceil(calibMsLeft / 1000)} s</b>
+              </div>
+
+              <div style={{ fontSize: 12, opacity: 0.75 }}>
+                (Ovo je priprema. Pravo prepoznavanje glasa iz audio signala dodajemo u narednim koracima.)
+              </div>
+            </div>
           </div>
         )}
       </div>
-
-      {isCalibratingOwner && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.55)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 16,
-            zIndex: 50,
-          }}
-        >
-          <div
-            style={{
-              maxWidth: 520,
-              width: "100%",
-              background: "white",
-              borderRadius: 14,
-              padding: 16,
-            }}
-          >
-            <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 8 }}>Podešavanje glasa vlasnika</div>
-
-            <div style={{ marginBottom: 10, lineHeight: 1.4 }}>
-              Pričaj normalno oko <b>10–15 sekundi</b> (npr. 3 rečenice). Cilj je da aplikacija kasnije ignoriše tebe i daje
-              replike samo drugima.
-            </div>
-
-            <div style={{ marginBottom: 12 }}>
-              Preostalo: <b>{Math.ceil(calibMsLeft / 1000)} s</b>
-            </div>
-
-            <div style={{ fontSize: 12, opacity: 0.75 }}>
-              (Ovo je priprema. Pravo prepoznavanje glasa iz audio signala dodajemo u narednim koracima.)
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
